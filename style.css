@@ -1,0 +1,113 @@
+body {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: 48px auto auto auto auto;
+  grid-gap: 16px;
+
+  padding: 48px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.label, .example {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.example {
+  padding: 16px;
+  font-size: 18px;
+  letter-spacing: 1px;
+
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+
+  transition: border-color .6s;
+}
+
+.example:hover {
+  border-color: black;
+}
+
+.title {
+  grid-column: 1 / span 5;
+}
+
+h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 300;
+
+  text-align: right;
+}
+
+.label.case {
+  grid-column: 1 / 2;
+  justify-content: flex-end;
+}
+
+.label.gender {
+  grid-row: 2 / 3;
+  justify-content: flex-end;
+}
+/*
+.label.gender {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}*/
+
+.masculine {
+  grid-column: 2;
+}
+
+.feminine {
+  grid-column: 3;
+}
+
+.neutral {
+  grid-column: 4;
+}
+
+.plural {
+  grid-column: 5;
+}
+
+.nominative {
+  grid-row: 3;
+}
+
+.accusative {
+  grid-row: 4;
+}
+
+.dative {
+  grid-row: 5;
+}
+
+.genitive {
+  grid-row: 6;
+}
+
+
+.noun {
+  opacity: .5;
+}
+
+strong {
+  font-weight: 400;
+}
+
+.nominative:hover, .accusative:hover, .dative:hover, .genitive:hover {
+  /*background-color: red;*/
+}
